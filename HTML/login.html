@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coding Conf 2026 | Register</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to main content</a>
+
+	<header>
+		<img src="../assets/logo-full.svg" alt="Logo" width="209" height="30">
+		<nav aria-label="Navigation Bar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="login.html" aria-current="page">Register</a></li>
+		</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+		<section aria-labelledby="form-title">
+			<h1 id="form-title">Your Journey to Coding Conf 2026 Starts Here!</h1>
+			<p class="lead">Secure your spot at Kingston's biggest coding conference.</p>
+
+			<!-- Using novalidate so that validation can handles checks and errors -->
+			<form id="registration-form" novalidate>
+
+				<!-- Drop zone to upload avatar -->
+				<div class="field">
+				<label for="avatar">Upload Avatar</label>
+				<div class="dropzone">
+					<img src="../assets/icon-upload.svg" alt="" width="30" height="30">
+					<span id="dropzone-text">Drag and drop or click to upload</span>
+					<input type="file" id="avatar" name="avatar" accept="image/jpeg, image/png"
+					   aria-describedby="avatar-hint avatar-error">
+				</div>
+				<p id="avatar-hint" class="hint">
+					<img src="../assets/icon-info.svg" alt="" width="16" height="16">
+					Upload your photo (JPG or PNG, max size: 500KB).
+				</p>
+				<!-- Aria implementation live -->
+				<span id="avatar-error" class="error" aria-live="polite"></span>
+				</div>
+
+				<div class="field">
+					<label for="full-name">Full Name</label>
+					<input type="text" id="full-name" name="fullName" autocomplete="name"
+						 aria-describedby="name-error">
+					<span id="name-error" class="error" aria-live="polite"></span>
+				</div>
+
+				<div class="field">
+					<label for="email">Email Address</label>
+					<input type="email" id="email" name="email" autocomplete="email"
+						 placeholder="example@email.com" aria-describedby="email-error">
+					<span id="email-error" class="error" aria-live="polite"></span>
+				</div>
+
+				<div class="field">
+					<label for="github">GitHub Username</label>
+					<input type="text" id="github" name="github" placeholder="@yourusername"
+						 aria-describedby="github-error">
+					<span id="github-error" class="error" aria-live="polite"></span>
+				</div>
+
+				<button type="submit">Generate My Ticket</button>
+		  </form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Coding Conf. Shanique Roberts.</p>
+	</footer>
+	<!-- Using defer so that the HTML elements loads before the javascripts tries to access them -->
+	<script src="../js/validation.js" defer></script>
+</body>
+</html>
